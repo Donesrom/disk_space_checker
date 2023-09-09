@@ -1,7 +1,7 @@
 import psutil
 
 def check_disk_space(min_threshold_gb=10):
-    root_partition = "/"
+    root_partition = "/var/lib/data" #should be on the persistent storage
     usage = psutil.disk_usage(root_partition)
 
     # Convert bytes to gigabytes
